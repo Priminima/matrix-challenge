@@ -10,7 +10,7 @@ export default ({ alternatives, aspects }) => {
         </th>
         {alternatives.map(alternative => (
           <th key={alternative.id}>
-            {calcScore()}
+            {calcScore(alternative.id)}
           </th>
         ))}
       </tr>
