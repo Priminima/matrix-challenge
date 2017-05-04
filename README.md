@@ -1,3 +1,26 @@
+# Matrix Challenge
+
+Your task is to implement a scoring algorithm that use the provided sample data
+and weights to render a score in the comparison matrix/table footer.
+
+Most of the project is already set up for you. Focus on writing a good scoring
+algorithm and on the presentation of the final score.
+
+## Getting Started
+
+Set up Node.js on your machine if you haven't already done so.
+
+```bash
+$ git clone https://github.com/hyperlab/matrix-challenge.git
+$ cd matrix-challenge
+$ npm install
+```
+
+I'd recommend using an editor like VS Code and enable linting for the editing
+best experience.
+
+## Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -1516,17 +1539,17 @@ When you build the project, Create React App will place the `public` folder cont
 2. Install `serve` by running `npm install --save serve`.
 
 3. Add this line to `scripts` in `package.json`:
-    
+
     ```
     "now-start": "serve build/",
     ```
-    
+
 4. Run `now` from your project directory. You will see a **now.sh** URL in your output like this:
-    
+
     ```
     > Ready! https://your-project-dirname-tpspyhtdtk.now.sh (copied to clipboard)
     ```
-    
+
     Paste that URL into your browser when the build is complete, and you will see your deployed app.
 
 Details are available in [this article.](https://zeit.co/blog/now-static)

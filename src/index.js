@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Table from './Table';
+
+import { aspects, alternatives } from './sampleData';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <Table aspects={aspects} alternatives={alternatives} />,
   document.getElementById('root')
 );

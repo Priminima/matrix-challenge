@@ -1,5 +1,102 @@
+* {
+  box-sizing: inherit;
+}
+html, body {
+  font-size: 20px;
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: lato, -apple-system, ".SFNSText-Regular", "Helvetica Neue",
+    "Roboto", "Segoe UI", sans-serif !important;
+  box-sizing: border-box;
+  color: #333;
 }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+h1 { font-size: 2.8rem; letter-spacing: -0.5px; }
+h2 { font-size: 2.0rem; }
+h3 { font-size: 1.4rem; }
+
+p, ul, li, dd, dt {
+  line-height: 1.6;
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+  border: none;
+
+  margin: 16px;
+  box-shadow: 0 2px 8px 1px rgba(0,0,0,0.24);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 1rem;
+  border-width: 1px;
+  border-color: #d8d8d8;
+  border-style: solid;
+  min-width: 260px;
+  max-width: 260px;
+  text-align: right;
+  vertical-align: center;
+  background-color: rgba(0,0,0,0.02);
+}
+
+thead td,
+thead th {
+  border-top: none;
+  vertical-align: bottom;
+}
+
+tfoot td,
+tfoot th {
+  border-bottom: none;
+}
+
+td:first-child,
+th:first-child {
+  border-left: none;
+}
+
+td:last-child,
+th:last-child {
+  border-right: none;
+}
+
+tr > *:first-child {
+  background-color: #5D7DA3;
+  border-color: #577091;
+  color: #fff;
+  text-align: left;
+  position: relative;
+}
+
+tr > *:first-child:after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.16));
+  width: 4px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+tbody tr:nth-child(odd) td {
+  background-color: rgba(0,0,0,0.04);
+}
+tr:nth-child(odd) > *:first-child {
+  background-color: #5B779B;
+  border-color: #577091;
+}
+th:nth-child(even), td:nth-child(even) {
+  background-color: #fff;
+}
+
