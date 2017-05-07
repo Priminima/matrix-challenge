@@ -4,10 +4,10 @@ import {alternatives, aspects} from "./sampleData";
  * value are from the best value in values
  *
  * @values an array of numbers
- * @best a string that is either 'max' or 'min'
+ * @best a string that is either "max" or "min"
  * @value the value that you want to convert to a relative value
  * */
-const calcRelativeValue = (values, best, value) => {
+export const calcRelativeValue = (values, best, value) => {
   let relativeValue = 0;
   const min = Math.min(...values);
   const max = Math.max(...values);
@@ -19,7 +19,7 @@ const calcRelativeValue = (values, best, value) => {
   return relativeValue;
 };
 
-/** Calculates a score for a product
+/** Calculates a score between 0 and 10 for a product
  * @id the id of the product
  * */
 const calcScore = (id) => {
@@ -29,14 +29,15 @@ const calcScore = (id) => {
   for (let aspect of aspects) {
     if (aspect.weight) {
       let values = [];
-      sumOfWeights += aspect.weight;
-      for (let alternative of alternatives)
+      for (let alternative of alternatives) {
         values.push(alternative.values[aspect.id]);
+      }
+
       const relativeValue = calcRelativeValue(values, aspect.best, values[id]);
       score += relativeValue*aspect.weight;
+      sumOfWeights += aspect.weight;
     }
   }
-  console.log(calcRelativeValue([1, 2, 3], "min", 2));
   return Math.round(score/sumOfWeights*10);
 };
 
