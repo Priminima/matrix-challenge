@@ -23,22 +23,26 @@ export const calcRelativeValue = (values, best, value) => {
  * @id the id of the product
  * */
 const calcScore = (id) => {
-  id = id-1;
+  const index = id-1; // This is to get the index of the id, should preferably
+                      // be replaced to a function that actually search for
+                      // the id. Or the data could be reformed so the id is the
+                      // key in the data structure.
   let score = 0;
   let sumOfWeights = 0;
   for (let aspect of aspects) {
     if (aspect.weight) {
       let values = [];
+      // Create a list with all alternative values for this aspect
       for (let alternative of alternatives) {
         values.push(alternative.values[aspect.id]);
       }
 
-      const relativeValue = calcRelativeValue(values, aspect.best, values[id]);
+      const relativeValue = calcRelativeValue(values, aspect.best, values[index]);
       score += relativeValue*aspect.weight;
       sumOfWeights += aspect.weight;
     }
   }
-  return Math.round(score/sumOfWeights*10);
+  return Math.round((score/sumOfWeights)*10);
 };
 
 export default calcScore;
