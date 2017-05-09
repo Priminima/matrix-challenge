@@ -23,13 +23,6 @@ export default ({ alternatives, aspects }) => {
           </th>
         ))}
       </tr>
-    <tr>
-      {colorArray.map(col=> (
-        <th style={{backgroundColor: col}}>
-          {col}
-        </th>
-      ))}
-    </tr>
     </tfoot>
   );
 };
